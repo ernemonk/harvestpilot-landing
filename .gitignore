@@ -18,3 +18,8 @@ yarn-error.log*
 dist/
 .next/
 coverage/
+
+# Local environment and logs (keep secrets tracked for now)
+.env
+sevice-account.json
+logs/
