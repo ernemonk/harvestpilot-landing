@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 
 const Navbar: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,8 +10,14 @@ const Navbar: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-harvest-green">
-            🌱 HarvestPilot
+          <Link to="/" className="flex items-center gap-2 sm:gap-3 flex-shrink-0">
+            <StaticImage
+              src="../images/logo.png"
+              alt="HarvestPilot"
+              placeholder="none"
+              className="h-10 sm:h-16 w-auto flex-shrink-0"
+              width={220}
+            />
           </Link>
 
           {/* Desktop Navigation */}
